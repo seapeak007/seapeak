@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/idea-seapeak.iml" filepath="$PROJECT_DIR$/idea-seapeak.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stockdata/stockdata.iml" filepath="$PROJECT_DIR$/stockdata/stockdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stockinf/stockinf.iml" filepath="$PROJECT_DIR$/stockinf/stockinf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stockservice/stockservice.iml" filepath="$PROJECT_DIR$/stockservice/stockservice.iml" />
+    </modules>
+  </component>
+</project>
