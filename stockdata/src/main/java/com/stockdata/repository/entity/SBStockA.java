@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
@@ -23,6 +20,7 @@ public class SBStockA {
      * snowball ID
      */
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long stockid ;
     /**
      * 交易所+代码
@@ -43,95 +41,95 @@ public class SBStockA {
     /**
      * 当前价格
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal current ;//	"2.708"
+   //  @Column(precision=30,scale = 5)
+    private String current ;//	"2.708"
     /**
      * 涨幅比例,单位%
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal percentage ;//	"0.48"
+   //  @Column(precision=30,scale = 5)
+    private String percentage ;//	"0.48"
     /**
      * 距昨天收盘的涨幅大小
      */
     @Column(name = "change_data" ,precision=30,scale = 5)
-    private BigDecimal change ;//	"0.013"
+    private String change ;//	"0.013"
     /**
      * 今天开盘价格
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal open	;//"2.71"
+   //  @Column(precision=30,scale = 5)
+    private String open	;//"2.71"
     /**
      * 今天最高价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal high	;//"2.712"
+   //  @Column(precision=30,scale = 5)
+    private String high	;//"2.712"
     /**
      * 今日最低价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal low	;//"2.708"
+   //  @Column(precision=30,scale = 5)
+    private String low	;//"2.708"
     /**
      * 今日收盘价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal close ;//	"2.708"
+   //  @Column(precision=30,scale = 5)
+    private String close ;//	"2.708"
     /**
      * 昨日收盘价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal last_close	;//"2.695"
+   //  @Column(precision=30,scale = 5)
+    private String last_close	;//"2.695"
     /**
      * 52周最高价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal high52week	;//"2.919"
+   //  @Column(precision=30,scale = 5)
+    private String high52week	;//"2.919"
     /**
      * 52周最低价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal low52week	;//"2.575"
+   //  @Column(precision=30,scale = 5)
+    private String low52week	;//"2.575"
     /**
      * 成交量（股）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal volume ;//	"1.38019601E8"
+   //  @Column(precision=30,scale = 5)
+    private String volume ;//	"1.38019601E8"
     /**
      * 成交量（手）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal lot_volume ;//	"1380196.01"
+   //  @Column(precision=30,scale = 5)
+    private String lot_volume ;//	"1380196.01"
     /**
      * 30日成交均量
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal volumeAverage ;//	"14514902"
+   //  @Column(precision=30,scale = 5)
+    private String volumeAverage ;//	"14514902"
     /**
      * 总市值
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal marketCapital ;//	"5.4188956969E9"
+   //  @Column(precision=30,scale = 5)
+    private String marketCapital ;//	"5.4188956969E9"
     /**
      * 每股收益
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal eps ;//	"0.0"
+   //  @Column(precision=30,scale = 5)
+    private String eps ;//	"0.0"
     /**
      * 累计净值或者市盈率（动态）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal pe_ttm ;//	"1.0203"
+   //  @Column(precision=30,scale = 5)
+    private String pe_ttm ;//	"1.0203"
     /**
      * 单位净值或者市盈率（静态）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal pe_lyr ;//	"2.7021"
-    @Column(precision=30,scale = 5)
-    private BigDecimal beta ;//	"0.0"
+   //  @Column(precision=30,scale = 5)
+    private String pe_lyr ;//	"2.7021"
+   //  @Column(precision=30,scale = 5)
+    private String beta ;//	"0.0"
     /**
      * 总股本
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal totalShares	;//"2001069312"
+   //  @Column(precision=30,scale = 5)
+    private String totalShares	;//"2001069312"
     /**
      * 请求时间
      */
@@ -150,24 +148,24 @@ public class SBStockA {
     /**
      * 股息收益率（%）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal yield ;//	"0.0"
+   //  @Column(precision=30,scale = 5)
+    private String yield ;//	"0.0"
     /**
      * 换手率（%）
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal turnover_rate	;//"0.35"
+   //  @Column(precision=30,scale = 5)
+    private String turnover_rate	;//"0.35"
     private String instOwn	;//"0.0"
     /**
      * 涨停价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal rise_stop ;//	"2.965"
+   //  @Column(precision=30,scale = 5)
+    private String rise_stop ;//	"2.965"
     /**
      * 跌停价
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal fall_stop ;//	"2.426"
+   //  @Column(precision=30,scale = 5)
+    private String fall_stop ;//	"2.426"
     /**
      * 当前货币单位，人民币
      */
@@ -175,13 +173,13 @@ public class SBStockA {
     /**
      * 成交额
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal amount ;//	"3.74066856E8"
+   //  @Column(precision=30,scale = 5)
+    private String amount ;//	"3.74066856E8"
     /**
      * 每股净资产
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal net_assets ;//	"0.0026"
+   //  @Column(precision=30,scale = 5)
+    private String net_assets ;//	"0.0026"
     private String hasexist ;//	""
     private String has_warrant ;//	"0"
     /**
@@ -210,8 +208,8 @@ public class SBStockA {
     /**
      * 价格交易最小值
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal tick_size ;//	"0.001"
+   //  @Column(precision=30,scale = 5)
+    private String tick_size ;//	"0.001"
     private String kzz_stock_symbol	;//""
     private String kzz_stock_name ;//	"商品型"
     private String kzz_stock_current ;//	"0.0"
@@ -226,8 +224,8 @@ public class SBStockA {
     /**
      * 市净率
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal pb ;//	"1041.92"
+   //  @Column(precision=30,scale = 5)
+    private String pb ;//	"1041.92"
     private String benefit_before_tax;//	"0.0"
     private String benefit_after_tax;//	"0.0"
     private String convert_bond_ratio;//	""
@@ -238,8 +236,8 @@ public class SBStockA {
     private String convertrate	;//"0.0"
     private String interestrtmemo;//	""
     private String release_date	;//""
-    @Column(precision=30,scale = 5)
-    private BigDecimal circulation ;//	"2.001069312E9"
+   //  @Column(precision=30,scale = 5)
+    private String circulation ;//	"2.001069312E9"
     private String par_value ;//	"0.0"
     private String due_time	;//"0.0"
     private String value_date ;//	""
@@ -255,13 +253,13 @@ public class SBStockA {
     /**
      * 流通股本
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal float_shares	 ; //"0"
+   //  @Column(precision=30,scale = 5)
+    private String float_shares	 ; //"0"
     /**
      * 流通市值
      */
-    @Column(precision=30,scale = 5)
-    private BigDecimal float_market_capital	;//"0.0"
+   //  @Column(precision=30,scale = 5)
+    private String float_market_capital	;//"0.0"
     private String disnext_pay_date;//	""
     private String convert_rate	;//"0.0"
     private String volume_ratio	;//"1.1"

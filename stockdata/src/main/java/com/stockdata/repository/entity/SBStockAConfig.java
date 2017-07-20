@@ -2,9 +2,7 @@ package com.stockdata.repository.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -15,6 +13,7 @@ import java.util.Date;
 @Table(name = "snowball_stocka_config")
 public class SBStockAConfig {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long tid ;
     private String code ;
     private int status ;

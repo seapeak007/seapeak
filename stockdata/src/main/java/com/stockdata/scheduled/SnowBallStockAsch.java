@@ -49,6 +49,8 @@ public class SnowBallStockAsch {
             }
 
             sbStockARepository.save(list) ;
+            sbStockATempRepository.deleteAll();
+
         }catch (Exception e){
             log.error("genSnowBallStockA error:"+e);
         }
