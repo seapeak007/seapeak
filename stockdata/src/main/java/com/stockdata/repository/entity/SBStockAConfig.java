@@ -16,6 +16,7 @@ public class SBStockAConfig {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long tid ;
     private String code ;
+    private String name ;
     private int status ;
     private Date add_time ;
 }
