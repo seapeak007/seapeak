@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * Created by UI03 on 2017/7/20.
  */
-public interface SBStockAConfigRepository extends JpaRepository<SBStockAConfig,Long> {
+public interface SBStockAConfigRepository extends JpaRepository<SBStockAConfig,String> {
 }
