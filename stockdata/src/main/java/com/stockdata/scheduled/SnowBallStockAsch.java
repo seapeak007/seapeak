@@ -39,7 +39,7 @@ public class SnowBallStockAsch {
             Gson gson = new Gson();
 
             for (SBStockATemp t : templist) {
-
+                log.info("SBStockATemp:"+t);
                 String value = t.getContent();
                 if (value != null && value.length() > 10) {
                     SBStockA sa = new SBStockA();

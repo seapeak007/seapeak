@@ -140,7 +140,7 @@ public class SBStockA {
     /**
      * 基础数据修改时间 unit毫秒
      */
-    private long updateAt ;//	"1493004628761"
+    private String updateAt ;//	"1493004628761"
     /**
      * 股息
      */
